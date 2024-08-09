@@ -1,5 +1,9 @@
+import { useParams } from "react-router-dom"
+
  export function Room() {
-    return {
+     const params = useParams();
+
+    return (
         <h1>Room</h1>
-    }
+    )
 }
