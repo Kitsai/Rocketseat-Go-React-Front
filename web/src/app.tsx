@@ -1,4 +1,5 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { Toaster } from "sonner";
 import { CreateRoom } from './pages/create-room'
 import { Room } from './pages/room'
 
@@ -8,11 +9,16 @@ const router = createBrowserRouter([
         element: <CreateRoom />  
     },
     {
-        path: '/rooms/:roomId',
+        path: '/room/:roomId',
         element: <Room />
     }
 ])
 export function App() {
-    return <RouterProvider router={router} />
+    return (
+        <>
+            <RouterProvider router={router} />
+            <Toaster />
+        </>
+    )
 }
 
